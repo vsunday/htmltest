@@ -7,6 +7,7 @@
   <div>
   <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https://sts.windows.net/eaf3994f-c889-4fb9-aea0-c64e85bdd75f/&TargetResource=" id="IdOfLink1" type="button">Login with Azure</a><br>
   <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk16uvvvy1haXhM75d7&TargetResource=" id="IdOfLink2" type="button">Login with Okta</a>
+  <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fapp.onelogin.com%2Fsaml%2Fmetadata%2F1a0428e5-4200-4300-8d7c-c4d18f38e883&TargetResource=" id="IdOfLink3" type="button">Login with OneLogin</a>
   </div>
     <script type="text/javascript">
         function getUrlVars() {
@@ -43,6 +44,7 @@
 // Each link must be given the TargetResource value
     window.onload = SetTR("IdOfLink1");
     window.onload = SetTR("IdOfLink2");
+    window.onload = SetTR("IdOfLink3");
 </script>
 </body>
 </html>
