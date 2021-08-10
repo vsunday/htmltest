@@ -1,50 +1,83 @@
 <!doctype html>
 <html>
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Discovery Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
-<body>
-  <div>
-  <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https://sts.windows.net/eaf3994f-c889-4fb9-aea0-c64e85bdd75f/&TargetResource=" id="IdOfLink1" type="button">Login with Azure</a><br>
-  <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk16uvvvy1haXhM75d7&TargetResource=" id="IdOfLink2" type="button">Login with Okta</a>
-  <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fapp.onelogin.com%2Fsaml%2Fmetadata%2F1a0428e5-4200-4300-8d7c-c4d18f38e883&TargetResource=" id="IdOfLink3" type="button">Login with OneLogin</a>
+<body class="bg-light">
+  <div class="container">
+    <h1 class="pt-3">SSO Login</h1>
+    <div class="row py-5">
+      <div class="col border rounded p-1 m-1" align="center">
+        <div class="row">
+          <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https://sts.windows.net/eaf3994f-c889-4fb9-aea0-c64e85bdd75f/&TargetResource=" id="IdOfLink1" type="button">
+            <img src="https://code.benco.io/icon-collection/azure-icons/Azure-Active-Directory.svg" height="100">
+          </a>
+        </div>
+        <div class="row">
+          <span>Login with Azure</span>
+        </div>
+      </div>
+      <div class="col border rounded p-1 m-1" align="center">
+        <div class="row">
+          <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=exk16uvvvy1haXhM75d7&TargetResource=" id="IdOfLink2" type="button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Okta_logo.svg" height="100">
+          </a>
+        </div>
+        <div class="row">
+          <span>Login with Okta</span>
+        </div>
+      </div>
+      <div class="col border rounded p-1 m-1" align="center">
+        <div class="row">
+          <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https%3A%2F%2Fapp.onelogin.com%2Fsaml%2Fmetadata%2F1a0428e5-4200-4300-8d7c-c4d18f38e883&TargetResource=" id="IdOfLink3" type="button">
+            <img src="https://www.onelogin.com/assets/img/press/presskit/display/logo_black.svg?v2" height="100">
+          </a>
+        </div>
+        <div class="row">
+          <span>Login with OneLogin</span>
+        </div>
+      </div>
+    </div>
   </div>
     <script type="text/javascript">
-        function getUrlVars() {
-                    var vars = {};
-                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
-                    function(m,key,value) {
-                     vars[key] = value;
-                    });
-                    return vars;
-        }
+        function getUrlVars() {
+                    var vars = {};
+                    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi,    
+                    function(m,key,value) {
+                     vars[key] = value;
+                    });
+                    return vars;
+        }
 
 
-        function addTR(obj,tr)
-        {
-                    obj.href = obj.href+tr;
-        }
+        function addTR(obj,tr)
+        {
+                    obj.href = obj.href+tr;
+        }
 
 
-        function SetTR(elementID)
-        {         
-                    var tr = "#target_resource#";
-                    if (getUrlVars()["TargetResource"])
-                    {
-                                tr = getUrlVars()["TargetResource"];
-                    }
+        function SetTR(elementID)
+        {         
+                    var tr = "#target_resource#";
+                    if (getUrlVars()["TargetResource"])
+                    {
+                                tr = getUrlVars()["TargetResource"];
+                    }
 
 
-                    var element = document.getElementById(elementID);
-                    addTR(element, tr);
-        }
+                    var element = document.getElementById(elementID);
+                    addTR(element, tr);
+        }
 
 
-// Must give each <a> an id 
+// Must give each <a> an id 
 // Each link must be given the TargetResource value
-    window.onload = SetTR("IdOfLink1");
-    window.onload = SetTR("IdOfLink2");
-    window.onload = SetTR("IdOfLink3");
+    window.onload = SetTR("IdOfLink1");
+    window.onload = SetTR("IdOfLink2");
+    window.onload = SetTR("IdOfLink3");
 </script>
 </body>
 </html>
