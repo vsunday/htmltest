@@ -55,14 +55,22 @@
       <div class="col border rounded p-1 m-1" align="center">
         <div class="row">
           <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=http://localhost:8080/auth/realms/myrealm&TargetResource=" id="IdOfLink5" type="button">
-            <img src="https://www.keycloak.org/resources/images/keycloak_logo_480x108.png" height="100">
+            <img src="https://www.keycloak.org/resources/images/keycloak_logo_480x108.png" height="90">
           </a>
         </div>
         <div class="row">
           <span>Login with Keycloak</span>
         </div>
       </div>
-      <div class="col rounded p-1 m-1" align="center">
+      <div class="col border rounded p-1 m-1" align="center">
+<div class="row">
+          <a href="https://sso.services.box.net/sp/startSSO.ping?PartnerIdpId=https://sts.windows.net/0d105c21-da75-44c6-b734-bd08cfa50a2f/&TargetResource=" id="IdOfLink6" type="button">
+            <img src="http://proartconsulting.net/wp-content/uploads/2019/06/Microsoft365_logo_horiz_c-gray_rgb-1024x376.png" height="100">
+          </a>
+        </div>
+        <div class="row">
+          <span>Login with M365</span>
+        </div>
       </div>
     </div>
   </div>
@@ -104,6 +112,7 @@
     window.onload = SetTR("IdOfLink3");
     window.onload = SetTR("IdOfLink4");
     window.onload = SetTR("IdOfLink5");
+    window.onload = SetTR("IdOfLink6");
 </script>
 </body>
 </html>
