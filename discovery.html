@@ -139,13 +139,15 @@
 
 // Must give each <a> an id 
 // Each link must be given the TargetResource value
-    window.onload = SetTR("IdOfLink1");
-    window.onload = SetTR("IdOfLink2");
-    window.onload = SetTR("IdOfLink3");
-    window.onload = SetTR("IdOfLink4");
-    window.onload = SetTR("IdOfLink5");
-    window.onload = SetTR("IdOfLink6");
-    window.onload = SetTR("IdOfLink7");
+    window.onload = () => {
+      SetTR("IdOfLink1");
+      SetTR("IdOfLink2");
+      SetTR("IdOfLink3");
+      SetTR("IdOfLink4");
+      SetTR("IdOfLink5");
+      SetTR("IdOfLink6");
+      SetTR("IdOfLink7");
+    };
 </script>
 </body>
 </html>
