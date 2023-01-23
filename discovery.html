@@ -139,6 +139,7 @@
 
 // Must give each <a> an id 
 // Each link must be given the TargetResource value
+    /*  
     window.onload = () => {
       document.querySelectorAll("a").forEach(e => {
         if (e.href.startsWith("https://")) {
@@ -146,6 +147,15 @@
         }
       });
     };
+    */
+  (function () {
+    const as = document.querySelectorAll("a");
+    for (let i=0; i<as.length; i++) {
+     if (as[i].herf.startsWith("https://")) {
+       SetTR(as[i].id);
+     }
+    }
+  })();
 </script>
 </body>
 </html>
